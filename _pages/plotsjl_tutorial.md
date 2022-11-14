@@ -1,7 +1,8 @@
 ---
 permalink: /tutorials/plots
-title: "Getting started with Plots.jl"
 ---
+
+# Getting started with Plots.jl
 
 The first thing to do is to ensure that `Plots.jl` is installed.
 This package is actually a meta-package, a sort of compendium that hosts a bunch of backends.
@@ -24,7 +25,7 @@ This behavior is different from Python, where it is implicitly element-wise; mat
 of a vector is undefined, so Julia does not define it either.
 
 ```julia
-x = range(0.0, 10.0, length=100)
+x = range(0, 10, length=100)
 y1 = sin.(x)
 y2 = cos.(x)
 ```
@@ -76,8 +77,25 @@ Perhaps the legend is in a bad spot, obscuring the data. We can change the locat
 plot!(legend=:bottomleft)
 ```
 
+The colon `:` denotes a symbol in Julia, which are commonly used for keyword arguments like these.
+
 For legends within the plot axes, this keyword can take on the following possible values:
 `:right, :left, :top, :bottom, :inside, :best, :legend, :topright, :topleft, :bottomleft, :bottomright`.
 To have legends outside the plot axes, simply prepend `outer` to these names, such as `:outertopleft`.
 
+## Logarithms and limits
+To set the axes on log scales, use `xscale` and `yscale`. The symbol `:log` sets the scale to $\log_{10}$.
+To set custom limits, use `xlims` and `ylims`. The limits can either be set in `plot` or modified on their own lines.
+
+Below, we use a macro called `@.` where every function to the right becomes an element-wise operation.
+This can be very convenient when the expressions become more complicated.
+
+```julia
+x = range(0, 5, length=100)
+y = @. 1 + exp(x^2)
+
+plt = plot(x, y, yscale=:log, title="1 + exp(x^2)", xlabel="x", ylabel="y", legend=false)
+xlims!(0, 3)
+ylims!(1e-1, 1e2)
+```
 
