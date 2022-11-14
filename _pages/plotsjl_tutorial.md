@@ -1,5 +1,5 @@
 ---
-permalink: /tutorials/plotsjl/
+permalink: /tutorials/plots
 title: "Getting started with Plots.jl"
 ---
 

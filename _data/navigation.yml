@@ -1,9 +1,9 @@
 # main links
 main:
-  - title: "Plots.jl Tutorial"
-    url: https://ininterrompue.github.io/tutorials/plots/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  - title: "Plots.jl tutorial"
+    url: /tutorials/plots
+  - title: "Math sandbox"
+    url: /sandbox
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
