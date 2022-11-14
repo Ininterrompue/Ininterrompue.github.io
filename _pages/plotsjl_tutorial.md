@@ -1,8 +1,7 @@
 ---
 permalink: /tutorials/plots
+title: Getting started with Plots.jl
 ---
-
-# Getting started with Plots.jl
 
 The first thing to do is to ensure that `Plots.jl` is installed.
 This package is actually a meta-package, a sort of compendium that hosts a bunch of backends.

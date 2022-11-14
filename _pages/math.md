@@ -1,5 +1,6 @@
 ---
 permalink: /sandbox
+title: LaTeX sandbox
 ---
 
 # Quadratic equation
