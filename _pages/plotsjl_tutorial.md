@@ -77,5 +77,6 @@ plot!(legend=:bottomleft)
 
 For legends within the plot axes, this keyword can take on the following possible values:
 `:right, :left, :top, :bottom, :inside, :best, :legend, :topright, :topleft, :bottomleft, :bottomright`.
+To have legends outside the plot axes, simply prepend `outer` to these names, such as `:outertopleft`.
 
 
