@@ -17,6 +17,7 @@ Our first plot will be of the functions $\sin x$ and $\cos x$.
 For our `x` coordinates, we can create a range from 0 to 10 of, say, 100 elements. The `range` function
 is the closest analogue to `np.linspace` in Python. The advantage of `range` is the reduced memory
 footprint. If we really need it as a vector (1D array), we can simply do `collect(x)`.
+
 For the `y1` coordinates, we can create a vector by evaluating `sin(x)` in an element-wise fashion. 
 To do this in Julia, we insert a dot right after the function call. 
 This behavior is different from Python, where it is implicitly element-wise; mathematically, the sine 
