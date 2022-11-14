@@ -3,7 +3,7 @@ permalink: /sandbox
 title: LaTeX sandbox
 ---
 
-# Quadratic equation
+## Quadratic equation
 
 Given the quadratic equation $ax^{2} + bx + c = 0$, the quadratic formula is
 
@@ -21,7 +21,7 @@ x = \frac{2c}{-b \mp \sqrt{b^{2} - 4ac}}
 
 and choose the roots among these two formulas which avoid the cancellation.
 
-# Einstein field equations
+## Einstein field equations
 
 The Einstein field equations relate the geometry of spacetime to the distribution of matter with it:
 
