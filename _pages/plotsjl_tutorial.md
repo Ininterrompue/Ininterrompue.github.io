@@ -9,7 +9,7 @@ The default backend is GR. If you want the plots to look like the plots from mat
 first install `PyPlot.jl` and then add `pyplot()` after importing the `Plots.jl` package. We'll
 stick with GR for now.
 
-```
+```julia
 using Plots
 ```
 
@@ -23,7 +23,7 @@ To do this in Julia, we insert a dot right after the function call.
 This behavior is different from Python, where it is implicitly element-wise; mathematically, the sine 
 of a vector is undefined, so Julia does not define it either.
 
-```
+```julia
 x = range(0.0, 10.0, length=100)
 y1 = sin.(x)
 y2 = cos.(x)
@@ -34,13 +34,13 @@ we call `plt`, but this is not strictly required. You may be working in an IDE o
 plots don't show up by default. If the plot doesn't show up, you'll need to call `gui()` (or `display(plt)`) 
 explicitly for the plot to display.
 
-```
+```julia
 plt = plot(x, y1)
 ```
 
 This plots the sine function only. To plot both functions, we insert brackets:
 
-```
+```julia
 plt = plot(x, [y1, y2])
 ```
 
@@ -49,7 +49,7 @@ function names in Julia means that the function is modifying one or more of its 
 modifying the current plot. Notice that the `plot!()` function doesn't need to plot a second set of data;
 if we want to remove the legend, we can simply write `plot!(legend=false)`.
 
-```
+```julia
 plot!(legend=false)
 title!("Trig functions")
 xlabel!("x")
@@ -61,7 +61,7 @@ on one line or multiple lines.
 Here, instead of removing the legend, we'll have a `label` for the data. The label also takes in a vector of 
 the same number of elements as the number of columns of the `y` argument, in our case 2.
 
-```
+```julia
 plt = plot(x, [y1, y2], title="Trig functions", xlabel="x", ylabel="y", label=["sin(x)", "cos(x)"])
 ```
 
@@ -72,7 +72,7 @@ go over these by section.
 Perhaps the legend is in a bad spot, obscuring the data. We can change the location by setting the 
 `legend` keyword argument.
 
-```
+```julia
 plot!(legend=:bottomleft)
 ```
 
